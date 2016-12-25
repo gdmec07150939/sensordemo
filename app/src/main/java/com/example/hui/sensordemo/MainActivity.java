@@ -1,11 +1,12 @@
 package com.example.hui.sensordemo;
 
+
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         tAccelerometer =(TextView)this.findViewById(R.id.accelerometer);
         tOrientation=(TextView)this.findViewById(R.id.orientation);
         tlight=(TextView)this.findViewById(R.id.light);
-        mSensorManager=(SensorManager)getSystemService(SEARCH_SERVICE);
+        mSensorManager=(SensorManager)getSystemService(SENSOR_SERVICE);
         mAccelerometer=mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         mOrientation=mSensorManager.getDefaultSensor(Sensor.TYPE_ORIENTATION);
         mlight=mSensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
@@ -58,4 +59,5 @@ public class MainActivity extends AppCompatActivity {
     public void onAccuracyChanged(Sensor sensor,int accuracy){
 
     }
+
 }
